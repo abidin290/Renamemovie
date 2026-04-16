@@ -10,12 +10,12 @@
 
 ## ✨ Fitur Utama
 
-- 🚀 **Performa Ultra Cepat:** Berjalan secara murni dalam bahasa C++ dengan optimasi C++17 dan Win32 GUI tanpa *runtime* berat. Ukuran executablenya hanya sekilas (di bawah 1 MB).
-- 🏷️ **Metadata Extraction:** Mendeteksi judul dan format tags langsung dengan memanfaatkan `ffprobe`. Secara otomatis membersihkan *string* judul dari karakter ilegal OS Windows.
-- ⚡ **In-Place MKV Track Renamer:** Ubah nama *Video Track*, *Audio Track*, dan *Subtitle Track* di dalam file `.mkv` seketika. Berkat dukungan integrasi ganda dengan `mkvpropedit`, proses modifikasi trek dikerjakan sepenuhnya secara **in-place** (tanpa _re-rendering_ atau menyalin *stream* ulang ke _temp file_).
-- 🖱️ **Drag and Drop:** Menjadikan *experience* alur kerja jauh lebih modern. Cukup *Drag \& Drop* folder video ke dalam jendela aplikasi, dan jalurnya akan otomatis ditetapkan sebagai target folder.
-- 🗂️ **Recursive Directory Scan:** Tersedia opsi "Scan Sub-folder" mumpuni untuk mengeksekusi penamaan secara menyeluruh, tidak hanya pada *root folder* melainkan pada setiap isi direktori turunannya di saat bersamaan.
-- 💾 **Persistent Memory (Save State):** Menyimpan input kustom khusus (seperti variasi *Track Name* yang sedang digunakan) ke dalam `config.ini` sehingga tidak ter-*reset* jika aplikasi ditutup atau di-_restart_.
+* 🚀 **Performa Ultra Cepat:** Berjalan secara murni dalam bahasa C++ dengan optimasi C++17 dan Win32 GUI tanpa *runtime* berat. Ukuran executablenya hanya sekilas (di bawah 1 MB).
+* 🏷️ **Metadata Extraction:** Mendeteksi judul dan format tags langsung dengan memanfaatkan `ffprobe`. Secara otomatis membersihkan *string* judul dari karakter ilegal OS Windows.
+* ⚡ **In-Place MKV Track Renamer:** Ubah nama *Video Track*, *Audio Track*, dan *Subtitle Track* di dalam file `.mkv` seketika. Berkat dukungan integrasi ganda dengan `mkvpropedit`, proses modifikasi trek dikerjakan sepenuhnya secara **in-place** (tanpa *re-rendering* atau menyalin *stream* ulang ke *temp file*).
+* 🖱️ **Drag and Drop:** Menjadikan *experience* alur kerja jauh lebih modern. Cukup *Drag & Drop* folder video ke dalam jendela aplikasi, dan jalurnya akan otomatis ditetapkan sebagai target folder.
+* 🗂️ **Recursive Directory Scan:** Tersedia opsi "Scan Sub-folder" mumpuni untuk mengeksekusi penamaan secara menyeluruh, tidak hanya pada *root folder* melainkan pada setiap isi direktori turunannya di saat bersamaan.
+* 💾 **Persistent Memory (Save State):** Menyimpan input kustom khusus (seperti variasi *Track Name* yang sedang digunakan) ke dalam `config.ini` sehingga tidak ter-*reset* jika aplikasi ditutup atau di-*restart*.
 
 ---
 
@@ -23,7 +23,7 @@
 
 Sebagai *backend* permesinannya, aplikasi ini mengontrol perangkat lunak konsol eksternal. Apabila Anda akan menjalankan atau menyebar eksekutor `.exe` ini, pastikan mesin komputer sudah terpasang:
 
-1. **[FFmpeg](https://ffmpeg.org/) (`ffprobe`):** Diperlukan karena program otomatis membaca informasi _string byte_ dengan standar FFprobe.
+1. **[FFmpeg](https://ffmpeg.org/) (`ffprobe`):** Diperlukan karena program otomatis membaca informasi *string byte* dengan standar FFprobe.
 2. **[MKVToolNix](https://mkvtoolnix.download/) (`mkvpropedit`):** Sangat disyaratkan apabila Anda ingin mengaktifkan opsi *Fast MKV In-Place Track Modification*.
 
 > ⚠️ *Pastikan `ffprobe` dan `mkvpropedit` terdaftar dalam **System Environment Variables (PATH)** di Windows untuk memperbolehkan program memanggilnya secara seamless!*
@@ -32,7 +32,7 @@ Sebagai *backend* permesinannya, aplikasi ini mengontrol perangkat lunak konsol 
 
 ## 🛠️ Cara *Build* dan Kompilasi (Development)
 
-Proyek ini tidak memerlukan *framework* IDE raksasa. Kompilasinya sangat _straightforward_ menggunakan **MinGW (`g++`)**.
+Proyek ini tidak memerlukan *framework* IDE raksasa. Kompilasinya sangat *straightforward* menggunakan **MinGW (`g++`)**.
 
 ### 1. Siapkan Resource
 
@@ -48,9 +48,9 @@ g++ -O3 -mwindows RenameVideo.cpp app_icon.res -o RenameVideo.exe -lcomctl32 -lo
 
 ### 📖 Penjelasan Flags
 
-- `-O3` → Level optimasi maksimal
-- `-mwindows` → Mode GUI tanpa console
-- `-lcomctl32`, `-lole32`, `-lshell32` → Library Windows untuk GUI & fitur sistem
+* `-O3` → Level optimasi maksimal
+* `-mwindows` → Mode GUI tanpa console
+* `-lcomctl32`, `-lole32`, `-lshell32` → Library Windows untuk GUI & fitur sistem
 
 ---
 
@@ -89,10 +89,10 @@ config.ini        → Auto-generated config
 ## 🚀 Catatan
 
 README ini sudah dirapikan dengan format GitHub-friendly:
-- Section jelas
-- Code block rapi
-- Highlight penting
-- Tetap mempertahankan seluruh konten asli (tidak ada huruf dihapus)
+
+* Section jelas
+* Code block rapi
+* Highlight penting
+* Tetap mempertahankan seluruh konten asli (tidak ada huruf dihapus)
 
 ---
-
